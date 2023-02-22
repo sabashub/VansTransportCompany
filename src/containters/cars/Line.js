@@ -1,14 +1,14 @@
 import React from 'react'
 import './Slider.css'
 
-const Line = () => {
+const Line = (props) => {
   return (
-    <div classname="line">
+    <div className="line">
         <div className='gradient__text' > 
-                <h1>Available Cars</h1>  
+                <h4>{props.headerText}</h4>  
             </div>
         <div className='horizontal_line'></div>
-        <div className='vertical_line'></div>
+        
         
     </div>
   )

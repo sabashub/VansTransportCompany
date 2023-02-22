@@ -25,8 +25,34 @@
     
 }
 .porsche{
-    padding-left: 10px;
+    width: 120px;
 }
+
+
 .bmw{
     padding-left: 30px;
+}
+
+
+
+@media screen and (min-width: 600px){
+    .mercedes:hover{
+        width: 120px;
+}
+
+.porsche:hover{
+    width: 150px;
+}
+
+.bmw:hover{
+    width: 130px;
+}
+
+.audi:hover{
+    width: 150px;
+}
+
+.opel:hover{
+    width: 150px;
+}
 }

@@ -20,13 +20,54 @@
 .gpt3__navbar-links_logo {
     color: #f5f3b5;
     font-size: 40px;
-      
+    cursor: pointer
 }
 
-.gpt3__navbar-links_logo img {
-    width: 62.56px;
-    height: 16.02px;
+.home {
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    #ffffff 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
 }
+
+.home:before{
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.home:hover {
+ background-position: 0;
+}
+
+.home:hover::before{
+  width: 100%;
+}
+
+
+.title_header:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  }
 
 .gpt3__navbar-links_container {
     display: flex;

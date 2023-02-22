@@ -1,14 +1,20 @@
 .container-slider {
-  max-width: 700px;
-  height: 500px;
+  width: 1200px;
+  height: 650px;
+  flex-direction: row;
   margin-left: 25px;
   margin-top: 40px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  
+  box-shadow: 0 2px 40px rgba(221, 210, 210, 0.2);
+ border-radius: 20px;
+  display: flex;
+  margin-bottom: 30px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 5px;
 }
+
 
 .slide {
   width: 100%;
@@ -16,29 +22,37 @@
   position: absolute;
   opacity: 0;
   transition: opacity ease-in-out 0.4s;
+  flex: 1;
+  margin: auto;
 }
 .slide img {
+  
   width: 100%;
   height: 100%;
+  margin: auto;
   object-fit: cover;
+  border-radius: 20px;
 }
 .active-anim {
   opacity: 1;
 }
 
 .btn-slide {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: white;
-  opacity: 0.4;
+  background: #d48fff;
+  opacity: 0.6;
   border: 1px solid rgba(34, 34, 34, 0.287);
   position: absolute;
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  
 }
+
+
 
 .btn-slide img {
   width: 25px;
@@ -52,30 +66,23 @@
 }
 .next {
   top: 50%;
-  right: 20px;
+  right: 2%;
   transform: translateY(-60%);
 }
 
 
 .horizontal_line{
   width: 100%;
-  height: 5px;
-  border: 5px solid;
-  border-radius: 5px;
+  height: 3px;
+  border: 4px solid;
   color: rgb(100, 47, 168);
-  filter:blur(2px);
+  filter:blur(1px);
+  margin-top: 30px;
 }
-.vertical_line{
-  border: 5px solid;
-  width: 5px;
-  height: 650px;
-  position:absolute;
-  left: 50%;
-  margin-left: -3px;
-  color: rgb(100, 47, 168);
-  filter: blur(2px)
-  
+.gradient__text h4{
+    font-size: 60px;
 }
+
 
 .gradient__text h1{
   margin-bottom: 1px;
@@ -86,9 +93,10 @@
 .container-dots {
   position: absolute;
   bottom: 10px;
-  left: 50%;
   transform: translateX(-50%);
   display: flex;
+  margin-left:46%;
+  
 }
 .gradient__text{
   font-family: var(--font-family);
@@ -98,36 +106,29 @@
   letter-spacing: -0.04em;
   display: flex;
   justify-content: center;
-  
+  margin-left: 10px;
 }
 .dot {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   border: 3px solid #f1f1f1;
-  margin: 0 5px;
+  margin: 0 7px;
   background: #f1f1f1;
 }
 .dot.active {
   background: rgb(32, 32, 32);
 }
 
-.about_car{
-  font-size: 20px;
-  color: rgb(155, 187, 222);
-  margin-left: 25px;
-  border-radius: 2px;
-  font-family: var(--font-family);
-  border-radius: 10px;
-  width: 700px;
+
+@media screen and (min-width: 600px){
+  .btn-slide:hover{
+    background-color: #d48fff;
+    width: 60px;
+    height: 60px;
+  }
   
-  font-weight: 500;
-
- 
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-
 
 
 
@@ -135,6 +136,20 @@
   .gradient__text h1{
     margin: auto;
   }
+  .container-slider{
+    width: 100%;
+    height: 500px;
+  }
+  .slide{
+    width: 100%;
+  }
+
+  .slide img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+  }
+  
   
 }
 
@@ -143,17 +158,83 @@
     flex-direction: column;
   }
   .gradient__text h1{
-    font-size: 50px;
+    font-size: 40px;
+    align-items: center;
+  }
+  
+  .container-slider{
+    height: 350px;
+    width: 100%;
+    margin-left: 3px;
+  }
+  
+  .slide{
+    width: 100%;
+  }
+
+  .slide img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
   }
 }
 
-@media screen and (max-width: 490px) {
-  .line{
-    flex-direction: column;
-  }
-    .gradient__text h1{
-      font-size: 40px;
+
+
+@media screen and (max-width: 550px) {
+    .container-slider{
+      height: 300px;
+      width: 100%;
+      margin-left:1px;
+      
     }
-  }
+
+    .dot{
+      width: 15px;
+      height: 15px;
+    }
+    .slide{
+      width: 100%;
+     
+    }
+    .slide img {
+  
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .btn-slide{
+      right: 20px;
+
+    }
+    .btn-slide img {
+      width: 15px;
+      height: 15px;
+      left: 10px;
+      pointer-events: none;
+    }
+    .container-dots {
+      position: absolute;
+      bottom: 10px;
+      transform: translateX(-50%);
+      display: flex;
+      right: 21%;
+      margin: auto;
+    }
+    .gradient__text h4{
+      font-size: 40px;
+      line-height: 50px;
+      /* margin: 15px; */
+      justify-content: center;
+      
+    }
+    
+
+    .btn-slide {
+      width: 40px;
+      height: 40px;
+    }
+    
+}
 
  

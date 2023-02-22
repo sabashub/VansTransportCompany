@@ -10,15 +10,14 @@ const Navbar = () => {
     <div className="gpt3__navbar">
       <div className="gpt3__navbar-links">
         <div className="gpt3__navbar-links_logo">
-          <h4>Vans Transport Company</h4>
+          <h4 className='title_header'>Vans Transport Company</h4>
         </div>
         <div className='line'></div>
         <div className="gpt3__navbar-links_container">
-          <p><a href="#home">Home</a></p>
-      
-          <p><a href="#cars">Cars</a></p>
-          <p><a href="#faq">FAQ</a></p>
-          <p><a href="#contactUs">Contact Us</a></p>
+          <p className='home'><a href="#home">Accueil</a></p>
+          <p className='home'><a href="#cars">Nos véhicules</a></p>
+          <p className='home'><a href="#faq">FAQ</a></p>
+          <p className='home'><a href="#contactUs">Nous contacter</a></p>
         </div>
       </div>
       

@@ -5,6 +5,7 @@ import porche from '../../assets/Porsche-Logo.png';
 import audi from '../../assets/Audi-Logo_2016.svg.png';
 import opel from '../../assets/opel.png';
 
+
 import './Brand.css';
 
 const Brand = () => (

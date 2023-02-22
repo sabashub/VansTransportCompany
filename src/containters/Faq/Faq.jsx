@@ -23,7 +23,7 @@ const Faq = () => {
             {data.map((item, i) =>(
                 <div className='item'>
                     <div className='title' onClick ={() => toggle(i)} >
-                        <h2>{item.question}</h2>
+                        <h2 className='question'>{item.question}</h2>
                         <span className='plus_minus'>{selected === i ? '-' : '+'}</span>
                     </div>
                     <div className={selected === i ? 'show' : 'content'}>
@@ -41,23 +41,23 @@ const Faq = () => {
 
 const data = [
     {
-        question: 'Question 1',
-        answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        question: 'Peut-on bénéficier de vos services dans toute la France ?',
+        answer: "Oui, basée dans la région parisienne, Vans Transport company assure vos voyages dans la capitale ainsi que dans toute la France et va au delà des frontières dans toute l’Europe."
 
         
 
     },
     {
-        question: 'Question 2',
-        answer: 'answer 2'
+        question: 'Comment peut on réserver une course ?',
+        answer: 'Vous pouvez nous contacter par mail ou par téléphone afin de réserver un voyage. Notre priorité est de vous répondre dans les meilleurs délais. (vanstransportcompany@gmail.com, Transport de personnes par VTC : 0753726150, Livraison de marchandises et déménagement : 0769212818)'
     },
     {
-        question: 'Question 3',
-        answer: 'answer 3'
+        question: 'Cette compagnie assure-t’elle tout type de déplacement ?',
+        answer: 'Oui, que vos trajets soient courts ou longs, vous pouvez faire appel à notre société.'
     },
     {
-        question: 'Question 4',
-        answer: 'answer 4'
+        question: 'Quels sont les différents services proposés par la société ?',
+        answer: 'La société vous propose le transport de personnes ainsi que les déménagements et le transport de marchandises. Disposant de différents véhicules, notre société s’adapte à vos besoins'
     },
 ]
 
